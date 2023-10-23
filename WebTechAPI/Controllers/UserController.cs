@@ -106,7 +106,7 @@ namespace WebTechAPI.Controllers
                     default: { users.OrderBy(p => p.Id); } break; //id
                 }
 
-                users = users.Skip((pageNumber ?? 1 - 1) * pageSize ?? 5).Take(pageSize ?? 5);
+                users = users.Skip((pageNumber ?? 1 - 1) * (pageSize ?? 5)).Take(pageSize ?? 5);
                 
                 return users.ToList();
 
